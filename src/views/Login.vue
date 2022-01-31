@@ -2,7 +2,7 @@
   <v-container fluid>
     <v-row align="center" justify="center" class="mt-10" no-gutters>
       <v-col cols="12">
-        <v-card class="mx-auto" height="420" max-width="350" outlined>
+        <v-card dark class="mx-auto" height="420" max-width="350" outlined>
           <v-card-title class="text-center py-8 justify-center"
             >Lista de Contatos</v-card-title
           >

@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app id="main">
     <v-main>
       <v-container fluid>
         <router-view />
@@ -12,4 +12,8 @@
 export default {};
 </script>
 
-<style></style>
+<style scoped>
+#main {
+  background: rgb(126, 126, 126);
+}
+</style>

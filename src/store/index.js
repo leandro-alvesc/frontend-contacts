@@ -7,11 +7,13 @@ export default new Vuex.Store({
   state: {
     token: localStorage.getItem("token"),
     currentUser: null,
+    contacts: [],
   },
   getters: {
     token: (state) => state.token,
     currentUser: (state) => state.currentUser,
     isAuthenticated: (state) => !!state.currentUser,
+    contacts: (state) => state.contacts,
   },
   mutations: {
     setToken(state, token) {
@@ -25,6 +27,9 @@ export default new Vuex.Store({
     },
     setCurrentUser(state, user) {
       state.currentUser = user;
+    },
+    setContacts(state, contacts) {
+      state.contacts = contacts;
     },
   },
   actions: {
@@ -51,6 +56,17 @@ export default new Vuex.Store({
         .get("users/me")
         .then(({ data }) => {
           commit("setCurrentUser", data);
+          return Promise.resolve(data);
+        })
+        .catch(({ response }) => {
+          return Promise.reject(response.data.code);
+        });
+    },
+    getContacts({ commit }) {
+      return this._vm.$axios
+        .get("contacts")
+        .then(({ data }) => {
+          commit("setContacts", data);
           return Promise.resolve(data);
         })
         .catch(({ response }) => {
