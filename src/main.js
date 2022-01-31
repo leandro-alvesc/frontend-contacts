@@ -7,6 +7,8 @@ import "./plugins/axios";
 
 Vue.config.productionTip = false;
 
+require("dotenv").config();
+
 new Vue({
   vuetify,
   router,
