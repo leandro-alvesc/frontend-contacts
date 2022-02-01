@@ -10,13 +10,14 @@
             <v-text-field
               v-model="username"
               label="Usuário"
+              :rules="[rules.required]"
               type="text"
             ></v-text-field>
             <v-text-field
               label="Senha"
               v-model="password"
               :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
-              :rules="[rules.required, rules.minPass]"
+              :rules="[rules.required]"
               :type="showPassword ? 'text' : 'password'"
               hint="Pelo menos 8 caracteres"
               @click:append="showPassword = !showPassword"
