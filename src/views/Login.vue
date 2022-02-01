@@ -2,7 +2,7 @@
   <v-container fluid>
     <v-row align="center" justify="center" class="mt-10" no-gutters>
       <v-col cols="12">
-        <v-card dark class="mx-auto" height="420" max-width="350" outlined>
+        <v-card dark class="mx-auto" height="450" max-width="350" outlined>
           <v-card-title class="text-center py-8 justify-center"
             >Lista de Contatos</v-card-title
           >
@@ -26,6 +26,11 @@
           <v-card-actions class="mx-2 my-7">
             <v-btn outlined :loading="loading" x-large block @click="login"
               >Login</v-btn
+            >
+          </v-card-actions>
+          <v-card-actions class="mx-2">
+            <v-btn outlined :loading="loading" block @click="register"
+              >Cadastre-se</v-btn
             >
           </v-card-actions>
         </v-card>
@@ -93,6 +98,9 @@ export default {
         .finally(() => {
           this.loading = false;
         });
+    },
+    register() {
+      this.$router.push({ name: "Register" });
     },
   },
 };
