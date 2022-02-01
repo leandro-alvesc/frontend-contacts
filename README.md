@@ -1,24 +1,33 @@
-# frontend-contacts
+# Back-end Contacts
 
-## Project setup
+> Vue APP to manage contacts.
+
+## 🧬 Built with
+
+* Vue 2.6
+* Vuetify
+* Vuex
+
+## 💻 Requirements
+
+Before you start, make sure you have the following resources:
+
+* Node.js
+* npm
+
+## 🚀 Setting up
+
+Run the following commands:
+
+- Install dependencies:
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+## 🗃 Initializing
+
+To run the APP, run the command:
+
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
